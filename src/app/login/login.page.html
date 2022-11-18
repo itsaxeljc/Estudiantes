@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/administrator-6368695-5250842.png"/>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-label><h1>Bienvenido Administrador</h1></ion-label>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="8">
+        <ion-item>
+          <ion-label position="floating">Clave de acceso</ion-label>
+            <ion-input [(ngModel)]="clave"></ion-input>
+        </ion-item>
+        <div *ngIf="error">
+          <ng-container>
+            <div class="errormessage">
+              Clave de acceso incorrecta
+            </div>
+          </ng-container>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+        <ion-button expand="block" shape="round" fill="outline" size="default" (click)="signIn()">Iniciar sesión</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
